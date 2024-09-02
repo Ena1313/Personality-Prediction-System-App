@@ -1,0 +1,247 @@
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1b2530;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    max-width: 800px;
+    padding: 30px;
+    background-color: #2b3b4d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 80px;
+    color: #eeeeee;
+}
+
+header {
+    text-align: center;
+    margin: 70px auto;
+}
+
+header h1 {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #E74C3C;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.4rem;
+    color: #dbdbdb;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #1b2530;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 23px;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+}
+
+button:hover {
+    background-color: #962f24;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.gender-options input[type="radio"] {
+    margin-right: 8px;
+}
+
+#openness label {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+}
+
+#openness input[type="radio"] {
+    display: block;
+    margin: 0 auto;
+}
+
+#openness span {
+    display: block;
+    margin-top: 5px;
+}
+
+.trait-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-bottom: 80px;
+}
+
+.trait-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trait-options input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #1b2530;
+    margin: 10% auto;
+    padding: 40px 50px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    position: relative;
+    color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    color: #E74C3C;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.close {
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #E74C3C;
+}
+
+#takeTestAgain {
+    background-color: #a13e33;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#takeTestAgain:hover {
+    background-color: #571912;
+}
+
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #E74C3C;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+body::before {
+    left: -230px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body::after {
+    right: -120px;
+    top: 50%;
+    transform: translateY(-90%);
+}
+
+.circle {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background-color: #E74C3C;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.bottom-left {
+    bottom: -1250px;
+    left: -350px;
+}
+
+.bottom-right {
+    bottom: -750px;
+    right: -450px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Prediction App</title>
+    <link rel="stylesheet" href="questionstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Start Your Personality Test</h1>
+        <p>Please fill in the fields below. Enter your gender and age, then rate the personality traits from 1 (low) to
+            10 (high).</p>
+    </header>
+    <div class="container">
+        <form id="predictionForm">
+            <label>Gender:</label>
+            <div class="gender-options">
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female" required> Female
+                </label>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male" required> Male
+                </label>
+            </div>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="openness">Openness:</label>
+            <div class="trait-options">
+                <p>Openness to Experience reflects the extent to which an individual is imaginative, curious, and open
+                    to new ideas and experiences. People high in openness are often creative and willing to explore
+                    novel concepts, while those low in openness may prefer routine and familiarity.</p>
+                <label><input type="radio" name="openness" value="1" required> 1</label>
+                <label><input type="radio" name="openness" value="2"> 2</label>
+                <label><input type="radio" name="openness" value="3"> 3</label>
+                <label><input type="radio" name="openness" value="4"> 4</label>
+                <label><input type="radio" name="openness" value="5"> 5</label>
+                <label><input type="radio" name="openness" value="6"> 6</label>
+                <label><input type="radio" name="openness" value="7"> 7</label>
+                <label><input type="radio" name="openness" value="8"> 8</label>
+                <label><input type="radio" name="openness" value="9"> 9</label>
+                <label><input type="radio" name="openness" value="10"> 10</label>
+            </div>
+
+            <label for="neuroticism">Neuroticism:</label>
+            <div class="trait-options">
+                <p>Neuroticism measures the tendency to experience negative emotions such as anxiety, depression, and
+                    moodiness. High neuroticism is associated with emotional instability and vulnerability to stress,
+                    whereas low neuroticism indicates a more calm and stable emotional state.</p>
+                <label><input type="radio" name="neuroticism" value="1" required> 1</label>
+                <label><input type="radio" name="neuroticism" value="2"> 2</label>
+                <label><input type="radio" name="neuroticism" value="3"> 3</label>
+                <label><input type="radio" name="neuroticism" value="4"> 4</label>
+                <label><input type="radio" name="neuroticism" value="5"> 5</label>
+                <label><input type="radio" name="neuroticism" value="6"> 6</label>
+                <label><input type="radio" name="neuroticism" value="7"> 7</label>
+                <label><input type="radio" name="neuroticism" value="8"> 8</label>
+                <label><input type="radio" name="neuroticism" value="9"> 9</label>
+                <label><input type="radio" name="neuroticism" value="10"> 10</label>
+            </div>
+
+            <label for="conscientiousness">Conscientiousness:</label>
+            <div class="trait-options">
+                <p>Conscientiousness refers to the degree of self-discipline, organization, and dependability an
+                    individual exhibits. High conscientiousness is associated with being thorough, reliable, and
+                    goal-oriented, while low conscientiousness may reflect a more spontaneous and less orderly approach
+                    to life.</p>
+                <label><input type="radio" name="conscientiousness" value="1" required> 1</label>
+                <label><input type="radio" name="conscientiousness" value="2"> 2</label>
+                <label><input type="radio" name="conscientiousness" value="3"> 3</label>
+                <label><input type="radio" name="conscientiousness" value="4"> 4</label>
+                <label><input type="radio" name="conscientiousness" value="5"> 5</label>
+                <label><input type="radio" name="conscientiousness" value="6"> 6</label>
+                <label><input type="radio" name="conscientiousness" value="7"> 7</label>
+                <label><input type="radio" name="conscientiousness" value="8"> 8</label>
+                <label><input type="radio" name="conscientiousness" value="9"> 9</label>
+                <label><input type="radio" name="conscientiousness" value="10"> 10</label>
+            </div>
+
+            <label for="agreeableness">Agreeableness:</label>
+            <div class="trait-options">
+                <p>Agreeableness measures how cooperative, compassionate, and friendly an individual is. High
+                    agreeableness is associated with being trusting, kind, and supportive, whereas low agreeableness
+                    might reflect a more competitive and less empathetic nature.</p>
+                <label><input type="radio" name="agreeableness" value="1" required> 1</label>
+                <label><input type="radio" name="agreeableness" value="2"> 2</label>
+                <label><input type="radio" name="agreeableness" value="3"> 3</label>
+                <label><input type="radio" name="agreeableness" value="4"> 4</label>
+                <label><input type="radio" name="agreeableness" value="5"> 5</label>
+                <label><input type="radio" name="agreeableness" value="6"> 6</label>
+                <label><input type="radio" name="agreeableness" value="7"> 7</label>
+                <label><input type="radio" name="agreeableness" value="8"> 8</label>
+                <label><input type="radio" name="agreeableness" value="9"> 9</label>
+                <label><input type="radio" name="agreeableness" value="10"> 10</label>
+            </div>
+
+            <label for="extraversion">Extraversion:</label>
+            <div class="trait-options">
+                <p>Extraversion assesses the extent to which an individual is outgoing, energetic, and assertive. High
+                    extraversion is linked to sociability, enthusiasm, and talkativeness, while low extraversion may
+                    indicate a more reserved and introverted disposition.</p>
+                <label><input type="radio" name="extraversion" value="1" required> 1</label>
+                <label><input type="radio" name="extraversion" value="2"> 2</label>
+                <label><input type="radio" name="extraversion" value="3"> 3</label>
+                <label><input type="radio" name="extraversion" value="4"> 4</label>
+                <label><input type="radio" name="extraversion" value="5"> 5</label>
+                <label><input type="radio" name="extraversion" value="6"> 6</label>
+                <label><input type="radio" name="extraversion" value="7"> 7</label>
+                <label><input type="radio" name="extraversion" value="8"> 8</label>
+                <label><input type="radio" name="extraversion" value="9"> 9</label>
+                <label><input type="radio" name="extraversion" value="10"> 10</label>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    <div class="circle bottom-left"></div>
+    <div class="circle bottom-right"></div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Prediction Result</h2>
+            <p id="modalResult">Prediction result will be displayed here.</p>
+            <button id="takeTestAgain">Take Test Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
