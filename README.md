@@ -17,4 +17,6 @@ Microsoft Azure: Platforma korištena za hosting i skaliranje aplikacije, omogu�
 
 ## Deployment na Microsoft Azure
 Ovaj projekt je uspješno implementiran na Microsoft Azure, što omogućava skalabilnost, sigurnost i visoku dostupnost aplikacije.
+REST ENDPOINT
+http://1d3a1007-0f5d-4f43-a940-e030af57d09a.northeurope.azurecontainer.io/score
 
